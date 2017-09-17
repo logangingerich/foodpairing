@@ -1,5 +1,7 @@
 require 'spec_helper'
 
+# Types of testing, integration, end to end and ui, unit
+
 describe "get_ingredient_by_id" do
   before do
     @ingredient = Foodpairing.get_ingredient_by_id(1)

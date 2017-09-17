@@ -13,6 +13,6 @@ Gem::Specification.new do |s|
   s.license       = 'MIT'
   s.add_runtime_dependency 'httparty', '~> 0.13'
   s.add_runtime_dependency 'json', '~> 1.8'
-  s.add_runtime_dependency 'figaro', '~> 1.1'
   s.add_development_dependency "rspec", '~> 3.4'
+  s.add_development_dependency 'dotenv', '~> 2.1', '>= 2.1.1'
 end

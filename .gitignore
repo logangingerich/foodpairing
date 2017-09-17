@@ -4,5 +4,5 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-# Ignore application configuration
-/config/application.yml
+# Environment .ENV
+/variables.env
