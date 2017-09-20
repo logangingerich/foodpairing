@@ -2,20 +2,24 @@ PATH
   remote: .
   specs:
     foodpairing (0.0.1)
-      figaro (~> 1.1)
       httparty (~> 0.13)
       json (~> 1.8)
 
 GEM
   remote: http://rubygems.org/
   specs:
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
     diff-lcs (1.3)
-    figaro (1.1.1)
-      thor (~> 0.14)
+    dotenv (2.2.1)
+    hashdiff (0.3.6)
     httparty (0.15.6)
       multi_xml (>= 0.5.2)
     json (1.8.6)
     multi_xml (0.6.0)
+    public_suffix (3.0.0)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
@@ -29,14 +33,20 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
-    thor (0.19.4)
+    safe_yaml (1.0.4)
+    webmock (2.3.2)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  dotenv (~> 2.1, >= 2.1.1)
   foodpairing!
   rspec (~> 3.4)
+  webmock (~> 2.1)
 
 BUNDLED WITH
    1.13.6
