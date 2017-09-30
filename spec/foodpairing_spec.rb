@@ -17,7 +17,7 @@ describe "get_all_ingredients" do
     @ingredients = Foodpairing.get_all_ingredients
   end
 
-  it "returns array of ingredients" do
+  it "returns all ingredients" do
     expect(@ingredients).to eql([{"id"=>1, "name"=>"Bourbon whiskey"}, {"id"=>2, "name"=>"Apple"}])
   end
 end
@@ -29,7 +29,7 @@ describe "search_ingredients_by_name" do
     @name = @ingredient[0]["name"]
   end
 
-  it "finds correct ingredient" do
+  it "returns correct ingredient" do
     expect(@id).to eql(5427)
     expect(@name).to eql("Cognac")
   end
@@ -54,7 +54,7 @@ describe "get_ingredient_nutrients" do
     @id = @nutrients["id"]
   end
 
-  it "finds correct ingredient" do
+  it "returns correct ingredient" do
     expect(@id).to eql(114)
   end
 end
@@ -66,7 +66,7 @@ describe "get_all_brands" do
     @name = @brands[0]["name"]
   end
 
-  it "finds correct ingredient" do
+  it "returns all brands" do
     expect(@id).to eql(1)
     expect(@name).to eql("Remy Cointreau")
   end
@@ -79,7 +79,7 @@ describe "get_brand_by_id" do
     @name = @brand["name"]
   end
 
-  it "finds correct ingredient" do
+  it "returns the appropriate brand" do
     expect(@id).to eql(1)
     expect(@name).to eql("Remy Cointreau")
   end
