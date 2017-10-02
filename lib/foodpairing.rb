@@ -3,14 +3,17 @@ require "json"
 require 'dotenv'
 Dotenv.load('variables.env')
 
-module Foodpairing
+class Foodpairing
   def self.get_ingredient_by_id(id)
-    response = HTTParty.get("https://api.foodpairing.com/ingredients/#{id}", headers: { 'X-Application-ID' => ENV['XApplicationID'], 'X-Application-Key' => ENV['XApplicationKey'] })
-    @ingredient = JSON.parse(response.body)
+    #response = HTTParty.get("https://api.foodpairing.com/ingredients/#{id}", headers: { 'X-Application-ID' => ENV['XApplicationID'], 'X-Application-Key' => ENV['XApplicationKey'] })
+    #@ingredient = JSON.parse(response.body)
+    p 'foofjdskfjdskl'
   end
 
   def self.get_all_ingredients
+    p "YOYOYOYO@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     response = HTTParty.get("https://api.foodpairing.com/ingredients/", headers: { 'X-Application-ID' => ENV['XApplicationID'], 'X-Application-Key' => ENV['XApplicationKey'] })
+    p response
     @ingredients = JSON.parse(response.body)
   end
 
