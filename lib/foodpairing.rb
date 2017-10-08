@@ -1,7 +1,6 @@
 require "httparty"
 require "json"
 #require 'dotenv'
-#Dotenv.load('variables.env')
 
 class Foodpairing
 
@@ -21,19 +20,18 @@ class Foodpairing
   end
 
   def self.get_pairings_for_ingredient(id)
+    @pairings_array = []
     response = HTTParty.get("https://api.foodpairing.com/ingredients/#{id}/pairings", headers: { 'X-Application-ID' => ENV['XApplicationID'], 'X-Application-Key' => ENV['XApplicationKey'] })
-    @pairings = JSON.parse(response.body)
+    @pairings_object = JSON.parse(response.body)
+    @pairings_object.each do |pairing|
+      @pairings_array.push(pairing["_links"]["ingredient"]["name"])
+    end
+    @pairings_array
   end
 
   def self.get_ingredient_nutrients(id)
     response = HTTParty.get("https://api.foodpairing.com/ingredients/#{id}/nutrients", headers: { 'X-Application-ID' => ENV['XApplicationID'], 'X-Application-Key' => ENV['XApplicationKey'] })
-    nutrients = JSON.parse(response.body)
-    #nutrients.each do |nutrient|
-      #p nutrient["_links"]["nutrient"]["href"]
-    #end
-    #second_response = HTTParty.get("#{nutrients["_links"]["nutrient"]["href"]}", headers: { 'X-Application-ID' => 'a5934b11', 'X-Application-Key' => '8c253b200c5589734c4f833ee61b31fb' })
-    #p second_response.body
-    #nutrients2 = JSON.parse(second_response.body)
+    @nutrients = JSON.parse(response.body)
   end
 
   def self.get_all_brands
