@@ -37,14 +37,11 @@ end
 
 describe "get_pairings_for_ingredient" do
   before do
-    @pairing = Foodpairing.get_pairings_for_ingredient(1)
-    @id = @pairing["id"]
-    @name = @pairing["name"]
+    @pairings = Foodpairing.get_pairings_for_ingredient(1)
   end
 
   it "returns appropriate pairing" do
-    expect(@id).to eql(1739)
-    expect(@name).to eql("Emmental")
+    expect(@pairings).to include("Emmental")
   end
 end
 
