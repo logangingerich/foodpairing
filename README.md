@@ -22,6 +22,8 @@ $ gem install foodpairing
 
 ### Next, you will need to set your personal API KEY and ID as Environment Variables:
 
+First, you will need the [Foodpairing API Site](http://developer.foodpairing.com/) and submit a request for a API Key and ID. It should only take a day or two to hear back with your personal key and id.
+
 This can be done a number of ways, but we recommend using [Figaro](https://github.com/laserlemon/figaro) for ease of use. It is important that you set the variables using the following syntax, so that the Foodpairing gem can access them:
 
 ```ruby
@@ -99,4 +101,17 @@ Returns an object with data for corresponding brand:
 ```
 
 ## Contributing
-I welcome any and all contributions to improve the quality of the Foodpairing Gem.
+I welcome any and all contributions to improve the quality of the Foodpairing Gem. To get started, go through the following steps:
+
+1. Fork and Clone the project.
+2. Uncomment out lines 3 and 4 of lib/foodpairing.rb to access Dotenv.
+3. Create a file in the root directory called `variables.env'
+4. With your personal API key and id from [Foodpairing](http://developer.foodpairing.com/), add to variables.env with the following:
+```ruby
+export XApplicationID=your-id-here
+export XApplicationKey=your-key-here
+```
+5. After your changes are made, run RSpec tests to make sure that everything sill passes. If necessary, write new tests for your contribution.
+6. Submit a detailed pull request
+
+I will respond to all requests as soon as possible. Thank you!

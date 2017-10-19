@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = 'foodpairing'
-  s.version       = '0.0.1'
+  s.version       = '1.0.0'
   s.date          = '2017-09-11'
   s.summary       = 'Foodpairing API Wrapper'
   s.description   = 'A rubygem wrapper for the Foodpairing API'
