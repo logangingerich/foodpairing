@@ -1,6 +1,7 @@
 require "httparty"
 require "json"
 #require 'dotenv'
+#Dotenv.load('variables.env')
 
 class Foodpairing
 
