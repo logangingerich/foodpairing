@@ -24,17 +24,17 @@ $ gem install foodpairing
 
 First, you will need the [Foodpairing API Site](http://developer.foodpairing.com/) and submit a request for a API Key and ID. It should only take a day or two to hear back with your personal key and id.
 
-This can be done a number of ways, but we recommend using [Figaro](https://github.com/laserlemon/figaro) for ease of use. It is important that you set the variables using the following syntax, so that the Foodpairing gem can access them:
+Setting your variables can be done a number of ways, but we recommend using [Figaro](https://github.com/laserlemon/figaro) for ease of use. It is important that you set the variables using the following syntax, so that the Foodpairing gem can access them:
 
 ```ruby
 XApplicationID: your-key-here
 XApplicationKey: your-id-here
 ```
-Depending on what you use to det your environment variables (Figaro, Dotenv, etc.) the syntax might be slightly different. But, as long as the environment variables are accessible as `ENV['XApplicationID']` and `ENV['XApplicationKey']` respectively, you should be all set.
+Depending on what you use to set your environment variables (Figaro, Dotenv, etc.) the syntax might be slightly different. But, as long as the environment variables are accessible as `ENV['XApplicationID']` and `ENV['XApplicationKey']` respectively, you should be all set.
 
 ## Usage
 
-Usage for the Foodpairing app is simply and straightforward. You simply access Foodpairing data by calling the `Foodpairing` class with one of the built in mehods. Here is a list of methods that you can acess, and what they will return. *(Note: In return examples, some object info is taken out for brevity.)*
+Usage for the Foodpairing app is simple and straightforward. You simply access Foodpairing data by calling the `Foodpairing` class with one of the built in mehods. Here is a list of methods that you can access, with an example of what they will return. *(Note: In return examples, some object info is taken out for brevity.)*
 
 **Get Ingredient By ID** (Require Ingredient ID as a parameter)
 
